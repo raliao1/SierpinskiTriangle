@@ -4,20 +4,20 @@ public void setup()
 }
 public void draw()
 {
-  sierpinski(20, 480, 460);
+  sierpinski(2, 480, 460);
 }
 public void sierpinski(int x, int y, int len) 
 {
-  int ranColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+  int randColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
   if(len <= 20){
-    fill(ranColor);
+    fill(randColor);
     triangle(x, y, x + len, y, x + len/2, y - len);
   } else{
-    fill(ranColor);
+    fill(randColor);
     sierpinski(x, y, len/2);
-    fill(ranColor);
+    fill(randColor);
     sierpinski(x + len/2, y, len/2);
-    fill(ranColor);
+    fill(randColor);
     sierpinski(x + len/4, y - len/2, len/2);
   }
 }
